@@ -1,8 +1,10 @@
 package core.basesyntax;
 
 public class PasswordValidator {
-    UserService userService = new UserService();
-    public static void validate(String password, String repeatPassword) throws PasswordValidationException {
+    private UserService userService = new UserService();
+
+    public static void validate(String password, String repeatPassword)
+            throws PasswordValidationException {
         if (password == null
                 || repeatPassword == null
                 || password.length() < 10
